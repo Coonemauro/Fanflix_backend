@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "talents",
+  "info": {
+    "singularName": "talent",
+    "pluralName": "talents",
+    "displayName": "Talent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subcategory.subcategory"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "talent"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobileNumber": {
+      "type": "string",
+      "required": true
+    },
+    "socialLinks": {
+      "type": "string",
+      "required": true
+    },
+    "fastDelivery": {
+      "type": "boolean",
+      "default": false
+    },
+    "enrollAccepted": {
+      "type": "boolean",
+      "default": false
+    },
+    "activateRequestAccepted": {
+      "type": "boolean"
+    },
+    "videoURL": {
+      "type": "string"
+    },
+    "profileOrders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "talentProfile"
+    },
+    "deliveryDays": {
+      "type": "integer",
+      "default": 7,
+      "required": false,
+      "min": 3,
+      "max": 14
+    },
+    "fastDeliveryDays": {
+      "type": "integer",
+      "default": 1,
+      "required": false,
+      "min": 1,
+      "max": 3
+    },
+    "viewCount": {
+      "type": "integer"
+    },
+    "completeOrderCount": {
+      "type": "integer"
+    },
+    "socialPlatform": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "Twitter",
+        "YouTube"
+      ],
+      "required": true
+    }
+  }
+}

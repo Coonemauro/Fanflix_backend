@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "BVbackend",
+  "scripts": {
+  "prebuild": "yarn install",
+  "build": "node node_modules/@strapi/strapi/bin/strapi.js build",
+  "start": "node node_modules/@strapi/strapi/bin/strapi.js start",
+  "develop": "node node_modules/@strapi/strapi/bin/strapi.js develop"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@mollie/api-client": "^3.7.0",
+    "@strapi/plugin-graphql": "^4.11.5",
+    "@strapi/plugin-i18n": "^4.11.5",
+    "@strapi/plugin-users-permissions": "^4.11.5",
+    "@strapi/provider-email-sendgrid": "^4.11.5",
+    "@strapi/provider-upload-cloudinary": "^4.11.5",
+    "@strapi/strapi": "^4.11.5",
+    "better-sqlite3": "^8.4.0",
+    "strapi-plugin-netlify-deployments": "https://github.com/maszatkavics/strapi-plugin-netlify-deployments.git",
+    "strapi-plugin-slugify": "^2.3.3"
+  },
+  "author": {
+    "name": "kavics"
+  },
+  "strapi": {
+    "uuid": "8ec559c5-f7ce-4513-8170-e970ef64b039"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

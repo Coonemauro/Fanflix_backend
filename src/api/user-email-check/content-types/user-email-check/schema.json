@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_email_checks",
+  "info": {
+    "singularName": "user-email-check",
+    "pluralName": "user-email-checks",
+    "displayName": "UserEmailCheck",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "code": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

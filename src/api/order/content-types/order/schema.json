@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "to": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string"
+    },
+    "videoURL": {
+      "type": "string"
+    },
+    "talent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::talent.talent",
+      "inversedBy": "orders"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "paymentError",
+        "new",
+        "inprogress",
+        "complete"
+      ],
+      "default": "open"
+    },
+    "userEmail": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    },
+    "talentProfile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::talent.talent",
+      "inversedBy": "profileOrders"
+    },
+    "orderID": {
+      "type": "uid",
+      "minLength": 24
+    },
+    "checkoutURL": {
+      "type": "string"
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "paid",
+        "expired",
+        "failed",
+        "canceled"
+      ],
+      "default": "open"
+    },
+    "paymentID": {
+      "type": "string"
+    },
+    "payedAmount": {
+      "type": "integer"
+    },
+    "occasion": {
+      "type": "enumeration",
+      "enum": [
+        "birthday",
+        "question",
+        "advice",
+        "other"
+      ]
+    },
+    "requestDescription": {
+      "type": "text"
+    },
+    "dueDate": {
+      "type": "date"
+    }
+  }
+}
