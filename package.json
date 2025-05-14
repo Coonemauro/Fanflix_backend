@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "description": "BVbackend",
   "scripts": {
-  "prebuild": "yarn install",
-  "build": "node node_modules/@strapi/strapi/bin/strapi.js build",
-  "start": "node node_modules/@strapi/strapi/bin/strapi.js start",
-  "develop": "node node_modules/@strapi/strapi/bin/strapi.js develop"
+    "prebuild": "yarn install",
+    "build": "node node_modules/@strapi/strapi/bin/strapi.js build",
+    "start": "node node_modules/@strapi/strapi/bin/strapi.js start",
+    "develop": "node node_modules/@strapi/strapi/bin/strapi.js develop"
   },
   "devDependencies": {},
   "dependencies": {
@@ -19,10 +19,9 @@
     "@strapi/provider-upload-cloudinary": "^4.11.5",
     "@strapi/strapi": "^4.11.5",
     "better-sqlite3": "^8.4.0",
+    "pg": "^8.16.0",
     "strapi-plugin-netlify-deployments": "https://github.com/maszatkavics/strapi-plugin-netlify-deployments.git",
-    "strapi-plugin-slugify": "^2.3.3",
-    "pg": "^8.x.x"
-
+    "strapi-plugin-slugify": "^2.3.3"
   },
   "author": {
     "name": "kavics"
