@@ -20,7 +20,9 @@
     "@strapi/strapi": "^4.11.5",
     "better-sqlite3": "^8.4.0",
     "strapi-plugin-netlify-deployments": "https://github.com/maszatkavics/strapi-plugin-netlify-deployments.git",
-    "strapi-plugin-slugify": "^2.3.3"
+    "strapi-plugin-slugify": "^2.3.3",
+    "pg": "^8.x.x"
+
   },
   "author": {
     "name": "kavics"
