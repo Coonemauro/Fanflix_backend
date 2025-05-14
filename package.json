@@ -20,6 +20,8 @@
     "@strapi/strapi": "^4.11.5",
     "better-sqlite3": "^8.4.0",
     "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "strapi-plugin-netlify-deployments": "https://github.com/maszatkavics/strapi-plugin-netlify-deployments.git",
     "strapi-plugin-slugify": "^2.3.3"
   },
